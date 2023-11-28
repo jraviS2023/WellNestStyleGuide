@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, CardMedia, Box } from '@mui/material';
 
-
 const ImageCard = ({ imageUrl }) => {
     return (
         <Box
@@ -15,7 +14,6 @@ const ImageCard = ({ imageUrl }) => {
                     component="img"
                     height="300"
                     image={imageUrl}
-                    alt="Sample Image"
                     sx={{ borderRadius: 4 }}
                 />
             </Card>
