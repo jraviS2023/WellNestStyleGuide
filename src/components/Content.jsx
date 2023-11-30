@@ -1,8 +1,9 @@
 import React from "react";
-import { Typography, Grid, Button, Chip } from "@mui/material";
+import { Typography, Grid, Button, Chip, Box } from "@mui/material";
 import ImageCard from "./ImageCard";
 import ColorCard from "./ColorCard";
 import TypographyCard from "./TypographyCard";
+import IconCard from "./IconCard";
 
 const Content = () => {
   return (
@@ -72,7 +73,7 @@ const Content = () => {
           and empowerment on the journey to mental well-being.
           <br />
         </Typography>
-        <ImageCard imageUrl={"WellNestLogo.png"} />
+        <ImageCard imageUrl={"/WellNestLogo.png"} />
       </section>
       <section id="color" className="mt-10">
         <Typography variant="h3">Colors</Typography>
@@ -97,41 +98,43 @@ const Content = () => {
           against which WellNest thrives as a haven for mental well-being <br />
         </Typography>
         <div>
-          <Grid container spacing={2}>
-            <Grid item xs={6}>
-              <ColorCard
-                title={"Kingfisher Blue"}
-                content={"#0087E8"}
-                backgroundColor={"#0087E8"}
-                textColor={"#FFFFFF"}
-              />
-            </Grid>
-            <Grid item xs={6}>
-              <ColorCard
-                title={"Calm Blue"}
-                content={"#81C8FB"}
-                backgroundColor={"#81C8FB"}
-                textColor={"#000000"}
-              />
-            </Grid>
+          <Box display="flex" justifyContent="center">
+            <Grid container spacing={2} style={{ maxWidth: "800px" }}>
+              <Grid item xs={6}>
+                <ColorCard
+                  title={"Kingfisher Blue"}
+                  content={"#0087E8"}
+                  backgroundColor={"#0087E8"}
+                  textColor={"#FFFFFF"}
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <ColorCard
+                  title={"Calm Blue"}
+                  content={"#81C8FB"}
+                  backgroundColor={"#81C8FB"}
+                  textColor={"#000000"}
+                />
+              </Grid>
 
-            <Grid item xs={6}>
-              <ColorCard
-                title={"Deep Black"}
-                content={"#000000"}
-                backgroundColor={"#000000"}
-                textColor={"#FFFFFF"}
-              />
+              <Grid item xs={6}>
+                <ColorCard
+                  title={"Deep Black"}
+                  content={"#000000"}
+                  backgroundColor={"#000000"}
+                  textColor={"#FFFFFF"}
+                />
+              </Grid>
+              <Grid item xs={6}>
+                <ColorCard
+                  title={"Pure White"}
+                  content={"#FFFFFF"}
+                  backgroundColor={"#FFFFFF"}
+                  textColor={"#000000"}
+                />
+              </Grid>
             </Grid>
-            <Grid item xs={6}>
-              <ColorCard
-                title={"Pure White"}
-                content={"#FFFFFF"}
-                backgroundColor={"#FFFFFF"}
-                textColor={"#000000"}
-              />
-            </Grid>
-          </Grid>
+          </Box>
         </div>
       </section>
       <section id="typography" className="mt-10">
@@ -357,6 +360,63 @@ const Content = () => {
       <section id="icons" className="mt-10">
         <Typography variant="h3">Icons</Typography>
         <hr className="w-3/4" />
+        <Box display="flex" justifyContent="center">
+          <Grid
+            container
+            spacing={1}
+            style={{ maxWidth: "800px", marginTop: "20px" }}
+          >
+            <Grid item xs={3}>
+              <IconCard
+                iconUrl={"/Profile.png"}
+                iconName={"Profile Icon"}
+              ></IconCard>
+            </Grid>
+            <Grid item xs={3}>
+              <IconCard
+                iconUrl={"/DarthVader.png"}
+                iconName={"Darth Vader"}
+              ></IconCard>
+            </Grid>
+            <Grid item xs={3}>
+              <IconCard
+                iconUrl={"/Instagram.png"}
+                iconName={"Instagram Logo"}
+              ></IconCard>
+            </Grid>
+            <Grid item xs={3}>
+              <IconCard
+                iconUrl={"/Arrow.png"}
+                iconName={"Dropdown Icon"}
+              ></IconCard>
+            </Grid>
+
+            <Grid item xs={3} style={{ marginTop: "20px" }}>
+              <IconCard
+                iconUrl={"/Party.png"}
+                iconName={"Party Icon"}
+              ></IconCard>
+            </Grid>
+            <Grid item xs={3} style={{ marginTop: "20px" }}>
+              <IconCard
+                iconUrl={"/Draw.png"}
+                iconName={"Pencil Icon"}
+              ></IconCard>
+            </Grid>
+            <Grid item xs={3} style={{ marginTop: "20px" }}>
+              <IconCard
+                iconUrl={"/Whatsapp.png"}
+                iconName={"Whatsapp Logo"}
+              ></IconCard>
+            </Grid>
+            <Grid item xs={3} style={{ marginTop: "20px" }}>
+              <IconCard
+                iconUrl={"/Upload.png"}
+                iconName={"Upload Icon"}
+              ></IconCard>
+            </Grid>
+          </Grid>
+        </Box>
       </section>
       <section id="dialogs" className="mt-10">
         <Typography variant="h3">Dialogs</Typography>
