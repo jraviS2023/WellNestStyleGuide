@@ -447,14 +447,17 @@ const Content = () => {
       <section id="menus" className="mt-10">
         <Typography variant="h3">Menus</Typography>
         <hr className="w-3/4" />
-        <div>
-          <BasicSelect
-            mt={"mt-5"}
-            bgColor={"blue"}
-            textColor={"white"}
-            label={"How are you feeling now?"}
-            list={moods}
-          />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ width: '1000px' }}>
+            <BasicSelect
+              mt={"mt-5"}
+              bgColor={"blue"}
+              textColor={"white"}
+              label={"How are you feeling now?"}
+              list={moods}
+              onChange={() => { }}
+            />
+          </div>
         </div>
       </section>
       <section id="data" className="mt-10 mb-20">
