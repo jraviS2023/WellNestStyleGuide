@@ -4,8 +4,18 @@ import ImageCard from "./ImageCard";
 import ColorCard from "./ColorCard";
 import TypographyCard from "./TypographyCard";
 import IconCard from "./IconCard";
+import ActionAreaCard from "./ActionAreaCard";
+import BasicSelect from "./DropDown";
+import BasicModal from "./BasicModal";
 
 const Content = () => {
+  const moods = [
+    { value: "Really Happy", name: "Really Happy" },
+    { value: "Happy", name: "Happy" },
+    { value: "Sad", name: "Sad" },
+    { value: "Really Sad", name: "Really Sad" }
+  ];
+
   return (
     <div
       className="content"
@@ -245,7 +255,11 @@ const Content = () => {
           decision fatigue. <br />
         </Typography>
       </section>
-      <section id="buttons" className="mt-10">
+      {/* BUTTON SECTION */}
+      <section
+        id="buttons"
+        className="mt-10 grid grid-cols-1 place-items-center gap-4 "
+      >
         <Typography variant="h3">Buttons</Typography>
         <hr className="w-3/4" />
         <Button
@@ -320,6 +334,11 @@ const Content = () => {
         >
           Big Button
         </Button>
+        <ActionAreaCard
+          imageLink={"gameification.svg"}
+          featureName={"Gameification"}
+          description={"Play to get rewards"}
+        />
       </section>
       <section id="chips" className="mt-10">
         <Typography variant="h3">Chips</Typography>
@@ -418,13 +437,25 @@ const Content = () => {
           </Grid>
         </Box>
       </section>
+      {/* Dialog sectionn */}
       <section id="dialogs" className="mt-10">
         <Typography variant="h3">Dialogs</Typography>
         <hr className="w-3/4" />
+        <BasicModal></BasicModal>
       </section>
+      {/* MENU SECTION */}
       <section id="menus" className="mt-10">
         <Typography variant="h3">Menus</Typography>
         <hr className="w-3/4" />
+        <div>
+          <BasicSelect
+            mt={"mt-5"}
+            bgColor={"blue"}
+            textColor={"white"}
+            label={"How are you feeling now?"}
+            list={moods}
+          />
+        </div>
       </section>
       <section id="forms" className="mt-10">
         <Typography variant="h3">Forms</Typography>
