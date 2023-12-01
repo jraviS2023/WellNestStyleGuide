@@ -19,5 +19,4 @@ This repository contains a style guide for the WellNest application. The style g
 - Icons
 - Dialogs
 - Menus
-- Forms
 - Data Visualization 

@@ -457,10 +457,6 @@ const Content = () => {
           />
         </div>
       </section>
-      <section id="forms" className="mt-10">
-        <Typography variant="h3">Forms</Typography>
-        <hr className="w-3/4" />
-      </section>
       <section id="data" className="mt-10 mb-20">
         <Typography variant="h3">Data Visualization</Typography>
         <hr className="w-3/4" />

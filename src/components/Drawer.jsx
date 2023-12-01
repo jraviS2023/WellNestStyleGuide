@@ -19,7 +19,6 @@ const DrawerComponent = ({ isDrawerOpen, toggleDrawer }) => {
         'Icons',
         'Dialogs',
         'Menus',
-        'Forms',
         'Data Visualization',
     ];
 
