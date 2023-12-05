@@ -219,6 +219,15 @@ const Content = () => {
           access to <br />
           different features. The active tab is clearly highlighted, ensuring
           swift navigation. <br />
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <BottomNavbar></BottomNavbar>
+          </div>
         </Typography>
         <Typography variant="h4" sx={{ marginTop: "1rem" }}>
           Self-Monitoring
@@ -230,6 +239,33 @@ const Content = () => {
           aiding in understanding their mental <br />
           well-being.
         </Typography>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <div style={{ width: "1000px" }}>
+            <BasicSelect
+              mt={"mt-5"}
+              bgColor={"blue"}
+              textColor={"white"}
+              label={"How are you feeling now?"}
+              list={moods}
+              onChange={() => { }}
+            />
+          </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <DonutChart></DonutChart>
+        </div>
         <Typography variant="h4" sx={{ marginTop: "1rem" }}>
           Input Prompt
         </Typography>
@@ -239,6 +275,24 @@ const Content = () => {
           "How are you feeling today?" This guidance reduces guesswork and
           encourages straightforward input. <br />
         </Typography>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <div style={{ width: "1000px" }}>
+            <BasicSelect
+              mt={"mt-5"}
+              bgColor={"blue"}
+              textColor={"white"}
+              label={"How are you feeling now?"}
+              list={moods}
+              onChange={() => { }}
+            />
+          </div>
+        </div>
         <Typography variant="h4" sx={{ marginTop: "1rem" }}>
           Fixed Rewards
         </Typography>
@@ -257,6 +311,24 @@ const Content = () => {
           limited emotion options. This approach simplifies user input, reducing
           decision fatigue. <br />
         </Typography>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <div style={{ width: "1000px" }}>
+            <BasicSelect
+              mt={"mt-5"}
+              bgColor={"blue"}
+              textColor={"white"}
+              label={"How are you feeling now?"}
+              list={moods}
+              onChange={() => { }}
+            />
+          </div>
+        </div>
       </section>
       {/* BUTTON SECTION */}
       <section
@@ -460,7 +532,7 @@ const Content = () => {
         ></ReusableModal>
       </section>
       {/* MENU SECTION */}
-      <section id="menus" className="mt-10">
+      <section id="menus" className="mt-10 justify-items-center">
         <Typography variant="h3">Menus</Typography>
         <hr className="w-3/4" />
         <div
@@ -477,11 +549,19 @@ const Content = () => {
               textColor={"white"}
               label={"How are you feeling now?"}
               list={moods}
-              onChange={() => {}}
+              onChange={() => { }}
             />
           </div>
         </div>
-        <BottomNavbar></BottomNavbar>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <BottomNavbar></BottomNavbar>
+        </div>
       </section>
       <section id="data" className="mt-10 mb-20 grid justify-items-center">
         <Typography variant="h3">Data Visualization</Typography>
