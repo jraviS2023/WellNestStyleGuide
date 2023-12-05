@@ -208,6 +208,13 @@ const Content = () => {
       <section id="layout" className="mt-10">
         <Typography variant="h3">Page Layout And Spacing</Typography>
         <hr className="w-3/4" />
+        <Typography variant="body1" sx={{ marginTop: "1rem" }}>
+          Conveying the intricacies of website layout and spacing in a web page verion of Style Guide <br />
+          remains a complex task. Hence, we have not highlighted them in the web page version <br />
+          of the Style Guide. Moreover, to offer developers flexibility, we've made page layout and <br />
+          spacing slightly adaptable, allowing them to adjust for different devices and content <br />
+          variations based on the broader design principles outlined in other sections of the guide <br />
+        </Typography>
       </section>
       <section id="design" className="mt-10">
         <Typography variant="h3">Design Patterns</Typography>
