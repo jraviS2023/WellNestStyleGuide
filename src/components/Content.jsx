@@ -3,6 +3,7 @@ import { Typography, Grid, Button, Chip, Box } from "@mui/material";
 import ImageCard from "./ImageCard";
 import ColorCard from "./ColorCard";
 import TypographyCard from "./TypographyCard";
+import ChallengeCard from "./ChallengeCard";
 import IconCard from "./IconCard";
 import ActionAreaCard from "./ActionAreaCard";
 import BasicSelect from "./DropDown";
@@ -219,16 +220,17 @@ const Content = () => {
           access to <br />
           different features. The active tab is clearly highlighted, ensuring
           swift navigation. <br />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center"
-            }}
-          >
-            <BottomNavbar></BottomNavbar>
-          </div>
         </Typography>
+        <br />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <BottomNavbar></BottomNavbar>
+        </div>
         <Typography variant="h4" sx={{ marginTop: "1rem" }}>
           Self-Monitoring
         </Typography>
@@ -239,6 +241,7 @@ const Content = () => {
           aiding in understanding their mental <br />
           well-being.
         </Typography>
+        <br />
         <div
           style={{
             display: "flex",
@@ -275,6 +278,7 @@ const Content = () => {
           "How are you feeling today?" This guidance reduces guesswork and
           encourages straightforward input. <br />
         </Typography>
+        <br />
         <div
           style={{
             display: "flex",
@@ -302,6 +306,23 @@ const Content = () => {
           each game. These fixed rewards reinforce positive behavior in
           alignment with the mental health focus. <br />
         </Typography>
+        <br />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <ChallengeCard
+            key={0}
+            imgSrc={"./breathing_exercise.png"}
+            imgAlt={"Breathing Exercise Image"}
+            title={"Breathing Exercise"}
+            coinCnt={100}
+            isCompleted={false}
+          />
+        </div>
         <Typography variant="h4" sx={{ marginTop: "1rem" }}>
           Limited Choice
         </Typography>
@@ -311,6 +332,7 @@ const Content = () => {
           limited emotion options. This approach simplifies user input, reducing
           decision fatigue. <br />
         </Typography>
+        <br />
         <div
           style={{
             display: "flex",
