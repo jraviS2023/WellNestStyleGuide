@@ -7,6 +7,9 @@ import IconCard from "./IconCard";
 import ActionAreaCard from "./ActionAreaCard";
 import BasicSelect from "./DropDown";
 import BasicModal from "./BasicModal";
+import ReusableModal from "./ReusableModal";
+import BottomNavbar from "./NavBar";
+import DonutChart from "./DonutChart";
 
 const Content = () => {
   const moods = [
@@ -438,31 +441,52 @@ const Content = () => {
         </Box>
       </section>
       {/* Dialog sectionn */}
-      <section id="dialogs" className="mt-10">
+      <section id="dialogs" className="grid grid-cols-1 gap-4 mt-10 ">
         <Typography variant="h3">Dialogs</Typography>
         <hr className="w-3/4" />
-        <BasicModal></BasicModal>
+        <ReusableModal
+          showCancelButton={false}
+          buttonText={"OK Modal"}
+          mt={`mt-24`}
+          modalText={`Oops! Coins not enough for 30-minutes session. Try to earn more
+            coins?`}
+        ></ReusableModal>
+
+        <ReusableModal
+          showCancelButton={true}
+          buttonText={"Cancel Modal"}
+          mt={`mt-24`}
+          modalText={`You want to set/change your today’s mood to Really Happy ?`}
+        ></ReusableModal>
       </section>
       {/* MENU SECTION */}
       <section id="menus" className="mt-10">
         <Typography variant="h3">Menus</Typography>
         <hr className="w-3/4" />
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <div style={{ width: '1000px' }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center"
+          }}
+        >
+          <div style={{ width: "1000px" }}>
             <BasicSelect
               mt={"mt-5"}
               bgColor={"blue"}
               textColor={"white"}
               label={"How are you feeling now?"}
               list={moods}
-              onChange={() => { }}
+              onChange={() => {}}
             />
           </div>
         </div>
+        <BottomNavbar></BottomNavbar>
       </section>
-      <section id="data" className="mt-10 mb-20">
+      <section id="data" className="mt-10 mb-20 grid justify-items-center">
         <Typography variant="h3">Data Visualization</Typography>
         <hr className="w-3/4" />
+        <DonutChart></DonutChart>
       </section>
     </div>
   );
